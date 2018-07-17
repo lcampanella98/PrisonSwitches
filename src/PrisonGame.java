@@ -9,7 +9,9 @@ public class PrisonGame {
 		System.out.println("Enter number of prisoners brought into the room per day: ");
 		double prisonersPerDay = scan.nextDouble();
 		
-		System.out.println("Took the prisoners " + playGame(numPrisoners, prisonersPerDay) + " days to win the game");
+		double daysTaken = playGame(numPrisoners, prisonersPerDay);
+		double yearsTaken = daysTaken / 365.25;
+		System.out.println("Took the prisoners " + daysTaken + " days (" + yearsTaken + " years) to win the game");
 	}
 	
 	// returns number of days it took to win the game
